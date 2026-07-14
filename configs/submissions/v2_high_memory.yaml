@@ -1,0 +1,16 @@
+# Profile nộp bài: v2_high_memory
+# Dùng nếu run ổn định nhưng TBT/latency còn cao.
+
+name: v2_high_memory
+description: Tang memory utilization de vLLM co them KV cache/batching room.
+image: vllm/vllm-openai:v0.22.1
+model_path: /model
+served_model_name: Qwen3.5-2B
+host: 0.0.0.0
+port: 8000
+max_model_len: 32768
+gpu_memory_utilization: 0.94
+tensor_parallel_size: 1
+enable_prefix_caching: true
+shm_size: 2g
+

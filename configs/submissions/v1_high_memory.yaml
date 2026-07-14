@@ -1,0 +1,15 @@
+# Profile nộp bài: v1_high_memory
+# Chỉ dùng sau khi v1_baseline chạy thành công nhưng điểm latency còn yếu.
+
+name: v1_high_memory
+description: Tang nhe GPU memory utilization de cai thien latency neu baseline da on dinh.
+image: vllm/vllm-openai:v0.22.1
+model_path: /model
+served_model_name: Qwen3.5-2B
+host: 0.0.0.0
+port: 8000
+max_model_len: 32768
+gpu_memory_utilization: 0.92
+tensor_parallel_size: 1
+enable_prefix_caching: true
+shm_size: 2g

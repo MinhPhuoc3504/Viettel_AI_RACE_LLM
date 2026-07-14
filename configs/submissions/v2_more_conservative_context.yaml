@@ -1,0 +1,16 @@
+# Profile nộp bài: v2_more_conservative_context
+# Chỉ dùng nếu không có context reject và muốn thử giảm mạnh latency.
+
+name: v2_more_conservative_context
+description: Thu context ngan hon de kiem tra tac dong len TTFT/TBT.
+image: vllm/vllm-openai:v0.22.1
+model_path: /model
+served_model_name: Qwen3.5-2B
+host: 0.0.0.0
+port: 8000
+max_model_len: 8192
+gpu_memory_utilization: 0.90
+tensor_parallel_size: 1
+enable_prefix_caching: true
+shm_size: 2g
+

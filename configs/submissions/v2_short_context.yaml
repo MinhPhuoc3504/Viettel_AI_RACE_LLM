@@ -1,0 +1,16 @@
+# Profile nộp bài: v2_short_context
+# Dùng sau V1 nếu chạy ổn nhưng TTFT p95/TBT cao.
+
+name: v2_short_context
+description: Giam max_model_len de giam ap luc KV cache va latency.
+image: vllm/vllm-openai:v0.22.1
+model_path: /model
+served_model_name: Qwen3.5-2B
+host: 0.0.0.0
+port: 8000
+max_model_len: 16384
+gpu_memory_utilization: 0.90
+tensor_parallel_size: 1
+enable_prefix_caching: true
+shm_size: 2g
+
